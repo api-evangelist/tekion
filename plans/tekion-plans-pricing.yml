@@ -1,0 +1,105 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Tekion
+providerId: tekion
+created: '2026-07-10'
+modified: '2026-07-10'
+reconciled: false
+tags:
+- Automotive
+- Dealership
+- DMS
+- Partner API
+- Plans
+- Gated
+description: >-
+  Tekion does not publish public, self-serve pricing for the Automotive Partner
+  Cloud (APC) API program. Access is partner-gated and tiered - Standard,
+  Enterprise (Elevated), and Strategic (Premium) - with each tier differing in
+  the set of APIs exposed, rate limits, read/write and reference-data
+  capabilities, and go-to-market support. Commercial terms are negotiated as
+  part of the partner agreement (contact sales / partner enablement); dealers
+  separately authorize which partners may access their data through the APC
+  Integration Hub. Exact fees are not published and are not reconciled here.
+notes: >-
+  Tiers are named as advertised on the APC pages; the "Elevated"/"Premium"
+  labels also appear in Tekion's API-access descriptions and are treated as
+  synonyms of the Enterprise/Strategic partner tiers. Verify current tier
+  definitions and pricing directly with Tekion partner enablement
+  (APCintegrations@tekion.com) during reconciliation.
+sources:
+- https://tekion.com/products/apc
+- https://apc.tekioncloud.com/user/home
+- https://tekion.com/technology-partners
+plans:
+- id: tekion-apc-standard
+  name: Standard
+  type: partner
+  description: >-
+    Entry partner tier. Secure data exchange with access to Tekion's foundational
+    open APIs (near real-time sales, service, inventory, and parts data) and
+    standard rate limits. Self-serve registration and review before access is
+    granted.
+  entries:
+  - label: Partner Agreement
+    name: standard_partner
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales (partner agreement)
+    userMultiplied: false
+  elements:
+  - name: Foundational Open APIs
+  - name: Webhooks
+  - name: Standard Rate Limits
+- id: tekion-apc-enterprise
+  name: Enterprise (Elevated)
+  type: partner
+  description: >-
+    Expanded partner tier for a broader dealer footprint. Adds access to
+    additional APIs, higher rate limits, and enhanced read/write plus
+    reference-data access that enables accurate transactions.
+  entries:
+  - label: Partner Agreement
+    name: enterprise_partner
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales (partner agreement)
+    userMultiplied: false
+  elements:
+  - name: Additional APIs
+  - name: Higher Rate Limits
+  - name: Read/Write and Reference Data
+- id: tekion-apc-strategic
+  name: Strategic (Premium)
+  type: partner
+  description: >-
+    Deepest integration tier. Customized development, Premium APIs and API
+    mapping, specialized user workflows, plus enhanced go-to-market support such
+    as marketing announcements, press releases, webinars, and joint initiatives.
+  entries:
+  - label: Partner Agreement
+    name: strategic_partner
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales (custom agreement)
+    userMultiplied: false
+  elements:
+  - name: Premium APIs and API Mapping
+  - name: Custom Development
+  - name: Go-To-Market Support
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

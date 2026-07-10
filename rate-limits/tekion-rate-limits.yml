@@ -1,0 +1,59 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Tekion
+providerId: tekion
+created: '2026-07-10'
+modified: '2026-07-10'
+reconciled: false
+tags:
+- Automotive
+- Dealership
+- Partner API
+- Rate Limiting
+- Quotas
+- Gated
+description: >-
+  Tekion does not publish fixed numeric rate limits for the Automotive Partner
+  Cloud (APC) APIs on its public pages. Tekion states that rate limits are
+  tier-based - Standard partners get "standard rate limits" while Enterprise
+  partners get "higher rate limits" as part of expanded functionality. Exact
+  per-minute / per-day request caps, quotas, and throttling thresholds are
+  documented inside the gated partner API documentation dashboard and set by the
+  negotiated partner tier. No confirmed numeric limits are available here.
+notes: >-
+  Numeric per-partner or per-endpoint limits are not published as of the review
+  date. Verify the applicable caps for your tier inside the APC documentation
+  dashboard after approval, or with Tekion partner enablement
+  (APCintegrations@tekion.com).
+sources:
+- https://tekion.com/products/apc
+- https://apc.tekioncloud.com/user/home
+responseCodes:
+  throttled: 429
+limits:
+- name: Standard Tier Rate Limit
+  scope: partner
+  metric: requests
+  limit: standard (tier-based, not published numerically)
+  notes: Standard partners receive standard rate limits; exact numeric cap is documented in the gated dashboard.
+- name: Enterprise Tier Rate Limit
+  scope: partner
+  metric: requests
+  limit: higher (tier-based, not published numerically)
+  notes: Enterprise partners receive higher rate limits as part of expanded functionality.
+- name: Webhook Delivery
+  scope: partner
+  metric: events
+  limit: not published
+  notes: Webhook event delivery is governed by partner configuration and Tekion's delivery infrastructure; no public numeric limit.
+policies:
+- name: Tiered Limits
+  description: Rate limits scale with the partner tier (Standard vs Enterprise vs Strategic) rather than a single global cap.
+- name: Dealer Authorization
+  description: Access to a given dealer's data is gated by that dealer's authorizations in the APC Integration Hub, independent of raw request-rate limits.
+- name: Backoff Strategy
+  description: Clients should implement exponential backoff with jitter and honor Retry-After on 429 responses.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

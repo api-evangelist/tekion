@@ -1,0 +1,193 @@
+aid: tekion
+url: https://raw.githubusercontent.com/api-evangelist/tekion/refs/heads/main/apis.yml
+name: Tekion
+kind: company
+description: >-
+  Tekion is a cloud-native, AI-native automotive retail platform whose flagship
+  Automotive Retail Cloud (ARC) is a modern dealer management system (DMS)
+  spanning sales, service, parts, inventory, F&I, accounting, and CRM for
+  franchise dealerships and OEMs. Tekion exposes its data and workflows to
+  technology partners through the Automotive Partner Cloud (APC) - an open,
+  OpenAPI-standard partner API program with REST APIs and webhooks that give
+  approved partners near real-time access to a dealership's sales, service,
+  inventory, and parts data. APC is partner-gated: developers register at the
+  APC portal, submit a use case, and are reviewed (typically within ~48 hours)
+  before the API documentation dashboard, credentials, and endpoints are
+  unlocked. Access is tiered (Standard, Enterprise/Elevated, Premium/Strategic)
+  with different API scopes, rate limits, and read/write capabilities. Because
+  the technical reference is behind partner authentication, the APIs below are
+  honestly modeled by data domain rather than transcribed from a public spec.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Automotive
+- Dealership
+- DMS
+- Automotive Retail Cloud
+- Partner API
+- Sales
+- Service
+- Inventory
+- Parts
+- Webhooks
+- Gated
+created: '2026-07-10'
+modified: '2026-07-10'
+specificationVersion: '0.19'
+apis:
+- aid: tekion:tekion-sales-deals-api
+  name: Tekion Sales and Deals API
+  tags:
+  - Sales
+  - Deals
+  - F&I
+  - Gated
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://tekion.com/products/apc
+  baseURL: https://api.tekioncloud.com
+  properties:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+  - url: 'true'
+    type: EndpointsModeled
+  description: >-
+    Near real-time access to a dealership's sales and deal data - deal jackets,
+    desking, F&I products, and sold-vehicle records - through the Automotive
+    Partner Cloud. Concrete paths and schemas are published inside the gated APC
+    API documentation dashboard after partner approval; this API is modeled by
+    the sales/deals data domain that Tekion advertises, not transcribed from a
+    public reference.
+- aid: tekion:tekion-inventory-api
+  name: Tekion Inventory API
+  tags:
+  - Inventory
+  - Vehicles
+  - Gated
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://tekion.com/products/apc
+  baseURL: https://api.tekioncloud.com
+  properties:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+  - url: 'true'
+    type: EndpointsModeled
+  description: >-
+    Access to new and used vehicle inventory - stock, VIN-level detail, pricing,
+    and availability - exposed to approved partners via APC standard open APIs
+    and webhooks. Exact endpoints live behind the partner-gated documentation;
+    this entry is modeled from Tekion's advertised inventory data domain.
+- aid: tekion:tekion-service-api
+  name: Tekion Service API
+  tags:
+  - Service
+  - Repair Orders
+  - Fixed Ops
+  - Gated
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://tekion.com/products/apc
+  baseURL: https://api.tekioncloud.com
+  properties:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+  - url: 'true'
+    type: EndpointsModeled
+  description: >-
+    Fixed-operations and service data - repair orders, service appointments,
+    labor operations, and status updates - available to approved partners
+    through APC APIs and webhooks for near real-time sync. Endpoint paths and
+    schemas are documented inside the gated APC dashboard; this API is modeled
+    from Tekion's advertised service data domain.
+- aid: tekion:tekion-parts-api
+  name: Tekion Parts API
+  tags:
+  - Parts
+  - Catalog
+  - EPC
+  - Gated
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://tekion.com/products/apc
+  baseURL: https://api.tekioncloud.com
+  properties:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+  - url: 'true'
+    type: EndpointsModeled
+  description: >-
+    Parts inventory, catalog lookup, pricing, and ordering data (including
+    electronic parts catalog / EPC integration) exposed to approved partners via
+    APC. Concrete endpoints are published in the gated partner documentation;
+    this entry is modeled from Tekion's advertised parts data domain rather than
+    a public spec.
+- aid: tekion:tekion-customers-api
+  name: Tekion Customers API
+  tags:
+  - Customers
+  - CRM
+  - Gated
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://tekion.com/products/apc
+  baseURL: https://api.tekioncloud.com
+  properties:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+  - url: 'true'
+    type: EndpointsModeled
+  description: >-
+    Customer and CRM records - contact, ownership, and relationship data tied to
+    sales and service activity - made available to approved partners through
+    APC, subject to the dealer's data-sharing authorizations in the Integration
+    Hub. Endpoints are documented behind partner authentication; this API is
+    modeled from Tekion's advertised customer data domain.
+- aid: tekion:tekion-webhooks-api
+  name: Tekion Webhooks
+  tags:
+  - Webhooks
+  - Events
+  - Real-Time
+  - Gated
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://tekion.com/products/apc
+  baseURL: https://api.tekioncloud.com
+  properties:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+  - url: 'true'
+    type: EndpointsModeled
+  description: >-
+    Server-to-endpoint webhooks that keep partner systems in sync as dealership
+    data changes across sales, service, inventory, and parts. Webhooks POST
+    event payloads to a partner-registered HTTP endpoint (not a WebSocket).
+    Event catalog, payload schemas, and subscription management are documented
+    inside the gated APC dashboard; modeled here from Tekion's stated
+    APIs-plus-webhooks delivery model.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/tekion
+- type: Website
+  url: https://tekion.com
+- type: Documentation
+  url: https://tekion.com/products/apc
+- type: Portal
+  url: https://apc.tekioncloud.com
+- type: SignUp
+  url: https://apc.tekioncloud.com/user/register
+- type: Plans
+  url: plans/tekion-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/tekion-rate-limits.yml
+- type: FinOps
+  url: finops/tekion-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

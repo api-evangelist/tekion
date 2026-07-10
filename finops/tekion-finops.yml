@@ -1,0 +1,91 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Tekion
+providerId: tekion
+created: '2026-07-10'
+modified: '2026-07-10'
+reconciled: false
+tags:
+- Automotive
+- Dealership
+- Partner API
+- FinOps
+- Cost Management
+- FOCUS
+- Gated
+description: >-
+  FinOps view of Tekion Automotive Partner Cloud (APC) spend. Tekion does not
+  publish public, usage-metered API pricing; APC access is governed by a
+  negotiated partner agreement whose tier (Standard, Enterprise/Elevated,
+  Strategic/Premium) determines the APIs, rate limits, and capabilities
+  available. Cost is therefore contract-driven rather than pay-as-you-go, and is
+  not directly meterable from public information. For a partner building on APC,
+  the dominant cost drivers are the partner-agreement fee plus the partner's own
+  infrastructure to consume APIs and receive webhooks; for a dealer, data access
+  is authorized (not sold per call) through the APC Integration Hub.
+notes: >-
+  No public per-call or per-GB rates exist to reconcile. Treat APC as a
+  contract/enterprise cost line. Confirm commercial terms with Tekion partner
+  enablement (APCintegrations@tekion.com).
+sources:
+- https://tekion.com/products/apc
+- https://apc.tekioncloud.com/user/home
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Tekion
+serviceCategory: Automotive Software and Integration
+billingModel:
+  pricingCategory: Commitment-Based
+  billingFrequency: Contract
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+  - Usage
+focusColumns:
+  ServiceName: Tekion Automotive Partner Cloud
+  ServiceCategory: Automotive Software and Integration
+  ProviderName: Tekion
+  PublisherName: Tekion
+  InvoiceIssuerName: Tekion
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Commitment-Based
+meters:
+- name: partner_agreement
+  description: Negotiated APC partner-tier fee (Standard / Enterprise / Strategic). Not publicly rated.
+  unit: contract
+  aggregation: sum
+  dimensions:
+  - partner
+  - tier
+- name: api_requests
+  description: APC API calls consumed by the partner. Governed by tier rate limits; not publicly priced per call.
+  unit: requests
+  aggregation: sum
+  dimensions:
+  - partner
+  - api
+- name: webhook_events
+  description: Webhook events delivered to the partner endpoint. Not publicly rated.
+  unit: events
+  aggregation: sum
+  dimensions:
+  - partner
+principles:
+- name: Visibility
+  description: Track which APC APIs and webhook event types each integration consumes, and map them to the partner tier's allowances.
+- name: Allocation
+  description: Attribute the APC partner-agreement fee and consuming infrastructure to the product line or dealer segment the integration serves.
+- name: Optimization
+  description: Right-size the partner tier to the APIs actually needed; prefer webhooks over polling to reduce request volume against tier limits.
+- name: Accountability
+  description: Assign an owner for the Tekion partner relationship; review tier fit and API usage against agreement terms periodically.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

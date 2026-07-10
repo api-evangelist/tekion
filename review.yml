@@ -1,0 +1,91 @@
+aid: tekion
+name: Tekion
+review:
+  question: Does Tekion expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-10'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Tekion's partner integration surface (the
+    Automotive Partner Cloud) is delivered as request/response REST APIs plus
+    server-to-endpoint webhooks and FTP feeds. Tekion advertises "APIs and
+    webhooks" for near real-time sync - the real-time behavior is push-over-HTTP
+    (webhooks POST event payloads to a partner-registered URL), not a
+    bidirectional WebSocket. There is no documented ws:// or wss:// transport on
+    Tekion's own API to model, and the full technical reference is behind partner
+    authentication, so no AsyncAPI was created.
+findings:
+  summary: |
+    Tekion does not publish a documented public WebSocket API. Tekion is a
+    cloud-native automotive retail platform (Automotive Retail Cloud / ARC, a
+    modern DMS) that exposes dealership data to technology partners through the
+    Automotive Partner Cloud (APC). APC is a real, modern, OpenAPI-standard
+    partner API program covering sales, service, inventory, and parts data, but
+    it is PARTNER-GATED: developers register at apc.tekioncloud.com, submit a use
+    case and select APIs, and are reviewed (typically within ~48 hours) before
+    the API documentation dashboard, credentials, and endpoints are unlocked.
+    Near real-time updates are delivered via REST APIs and webhooks (plus FTP
+    feeds), not via a WebSocket. No realtime, bidirectional, or streaming
+    WebSocket (ws:// or wss://) endpoint is documented on Tekion's public
+    surface as of the review date.
+  accessModel: |
+    Partner-gated. The APC portal (apc.tekioncloud.com) presents marketing plus a
+    register/login gate; the technical API reference is only accessible after
+    approval. Access is tiered - Standard (foundational open APIs, standard rate
+    limits), Enterprise/Elevated (additional APIs, higher rate limits, expanded
+    read/write and reference-data access), and Premium/Strategic (customized
+    development, API mapping, specialized workflows, go-to-market support).
+    Dealers control which partners can access their data via the APC Integration
+    Hub, and can track who accesses what. Because the reference is gated, the
+    APIs in apis.yml are honestly MODELED by data domain (EndpointsModeled=true)
+    rather than transcribed from a public specification; no OpenAPI or Postman
+    collection was fabricated.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.tekioncloud.com
+      documented: partner-gated
+      note: APC standard/elevated/premium open APIs. Exact base host and paths are documented behind partner login; base shown here is representative.
+    - protocol: Webhook
+      scheme: https
+      documented: partner-gated
+      note: Server-to-endpoint webhooks POST change events to a partner-registered HTTP URL for near real-time sync. Not a WebSocket.
+    - protocol: FTP
+      scheme: ftp
+      documented: partner-gated
+      note: Tekion's systems-integration program also supports FTP/file feeds for bulk data integration.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Tekion's public APC pages as of the review date.
+  endpointsModeled: true
+  endpointsConfirmedRest: []
+sources:
+  - url: https://tekion.com/products/apc
+    type: Documentation
+    note: Automotive Partner Cloud overview - Standard/Enterprise/Strategic tiers, APIs and webhooks, secure dealership data access.
+  - url: https://apc.tekioncloud.com/user/home
+    type: Portal
+    note: APC developer portal landing - Standard Open APIs and Premium Open APIs; technical docs gated behind register/login.
+  - url: https://apc.tekioncloud.com/user/register
+    type: SignUp
+    note: Partner registration; use-case submission and API selection, reviewed within ~48 hours.
+  - url: https://tekion.com/blog/a-new-era-of-dealer-controlled-tech-automotive-partner-cloud-2-grows-40x-since-launch
+    type: Blog
+    note: APC 2.0 - Integration Hub for dealers to authorize/track partner data access, multi-application publishing.
+  - url: https://tekion.com/blog/automotive-partner-cloud-enhancing-collaboration-in-auto-retail
+    type: Blog
+    note: APC positioning and open-API integration ecosystem.
+  - url: https://tekion.com/technology-partners
+    type: Documentation
+    note: Technology / systems-integration partner program using Tekion APIs, FTP feeds, and webhooks.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists on Tekion's public API, and the partner
+    API (APC) is request/response REST plus HTTP webhooks and FTP feeds. Because
+    the full technical reference is partner-gated, the APIs were modeled by data
+    domain (EndpointsModeled=true) and no AsyncAPI, OpenAPI, or collection was
+    fabricated.
