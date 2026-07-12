@@ -172,6 +172,10 @@ apis:
     inside the gated APC dashboard; modeled here from Tekion's stated
     APIs-plus-webhooks delivery model.
 common:
+- type: TrustCenter
+  url: security/tekion-trust-center.yml
+- type: DomainSecurity
+  url: security/tekion-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/tekion
 - type: Website
