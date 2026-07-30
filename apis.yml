@@ -17,7 +17,19 @@ description: >-
   with different API scopes, rate limits, and read/write capabilities. Because
   the technical reference is behind partner authentication, the APIs below are
   honestly modeled by data domain rather than transcribed from a public spec.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tekion.png
 tags:
 - Automotive
 - Dealership
