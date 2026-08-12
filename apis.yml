@@ -61,8 +61,6 @@ apis:
     type: Documentation
   - url: https://apc.tekioncloud.com/user/register
     type: SignUp
-  - url: 'true'
-    type: EndpointsModeled
   description: >-
     Near real-time access to a dealership's sales and deal data - deal jackets,
     desking, F&I products, and sold-vehicle records - through the Automotive
@@ -84,8 +82,6 @@ apis:
     type: Documentation
   - url: https://apc.tekioncloud.com/user/register
     type: SignUp
-  - url: 'true'
-    type: EndpointsModeled
   description: >-
     Access to new and used vehicle inventory - stock, VIN-level detail, pricing,
     and availability - exposed to approved partners via APC standard open APIs
@@ -106,8 +102,6 @@ apis:
     type: Documentation
   - url: https://apc.tekioncloud.com/user/register
     type: SignUp
-  - url: 'true'
-    type: EndpointsModeled
   description: >-
     Fixed-operations and service data - repair orders, service appointments,
     labor operations, and status updates - available to approved partners
@@ -129,8 +123,6 @@ apis:
     type: Documentation
   - url: https://apc.tekioncloud.com/user/register
     type: SignUp
-  - url: 'true'
-    type: EndpointsModeled
   description: >-
     Parts inventory, catalog lookup, pricing, and ordering data (including
     electronic parts catalog / EPC integration) exposed to approved partners via
@@ -151,8 +143,6 @@ apis:
     type: Documentation
   - url: https://apc.tekioncloud.com/user/register
     type: SignUp
-  - url: 'true'
-    type: EndpointsModeled
   description: >-
     Customer and CRM records - contact, ownership, and relationship data tied to
     sales and service activity - made available to approved partners through
@@ -174,8 +164,6 @@ apis:
     type: Documentation
   - url: https://apc.tekioncloud.com/user/register
     type: SignUp
-  - url: 'true'
-    type: EndpointsModeled
   description: >-
     Server-to-endpoint webhooks that keep partner systems in sync as dealership
     data changes across sales, service, inventory, and parts. Webhooks POST
