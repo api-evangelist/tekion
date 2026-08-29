@@ -17,6 +17,17 @@ description: >-
   with different API scopes, rate limits, and read/write capabilities. Because
   the technical reference is behind partner authentication, the APIs below are
   honestly modeled by data domain rather than transcribed from a public spec.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: approval
