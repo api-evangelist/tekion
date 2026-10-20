@@ -1,7 +1,11 @@
 aid: tekion
+
 url: https://raw.githubusercontent.com/api-evangelist/tekion/refs/heads/main/apis.yml
+
 name: Tekion
+
 kind: company
+
 description: >-
   Tekion is a cloud-native, AI-native automotive retail platform whose flagship
   Automotive Retail Cloud (ARC) is a modern dealer management system (DMS)
@@ -17,6 +21,7 @@ description: >-
   with different API scopes, rate limits, and read/write capabilities. Because
   the technical reference is behind partner authentication, the APIs below are
   honestly modeled by data domain rather than transcribed from a public spec.
+
 deliveryModel:
   model: saas
   open_source: false
@@ -28,6 +33,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: paid
   onboarding: approval
@@ -40,7 +46,9 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tekion.png
+
 tags:
 - Automotive
 - Dealership
@@ -53,6 +61,7 @@ tags:
 - Parts
 - Webhook
 - Gated
+
 tags_raw:
 - Automotive
 - Dealership
@@ -65,9 +74,63 @@ tags_raw:
 - Parts
 - Webhooks
 - Gated
+
 created: '2026-07-10'
+
 modified: '2026-10-06'
+
 specificationVersion: '0.23'
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: Compliance
+  url: https://trust.tekion.com/
+- type: LLMsTxt
+  url: llms/tekion-llms.txt
+- type: SecurityTxt
+  url: well-known/tekion-status-security.txt
+- type: WellKnown
+  url: well-known/tekion-well-known.yml
+- type: Hosts
+  url: hosts/tekion-hosts.yml
+- type: Vendors
+  url: vendors/tekion-vendors.yml
+- type: Security
+  url: https://tekion.com/trust-portal/security
+- url: https://tekion.com/blog
+  type: Blog
+- type: TrustCenter
+  url: security/tekion-trust-center.yml
+- type: DomainSecurity
+  url: security/tekion-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/tekion
+- type: Website
+  url: https://tekion.com
+- type: StatusPage
+  url: https://status.tekion.com/
+- type: PrivacyPolicy
+  url: https://tekion.com/trust-portal/privacy
+- type: TermsOfService
+  url: https://tekion.com/refer/terms
+- type: Newsroom
+  url: https://tekion.com/news
+- type: Documentation
+  url: https://tekion.com/products/apc
+- type: Portal
+  url: https://apc.tekioncloud.com
+- type: SignUp
+  url: https://apc.tekioncloud.com/user/register
+- type: Plans
+  url: plans/tekion-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/tekion-rate-limits.yml
+- type: FinOps
+  url: finops/tekion-finops.yml
+
 apis:
 - aid: tekion:tekion-sales-deals-api
   name: Tekion Sales and Deals API
@@ -204,29 +267,20 @@ apis:
     Event catalog, payload schemas, and subscription management are documented
     inside the gated APC dashboard; modeled here from Tekion's stated
     APIs-plus-webhooks delivery model.
-common:
-- url: https://tekion.com/blog
-  type: Blog
-- type: TrustCenter
-  url: security/tekion-trust-center.yml
-- type: DomainSecurity
-  url: security/tekion-domain-security.yml
-- type: LinkedIn
-  url: https://www.linkedin.com/company/tekion
-- type: Website
-  url: https://tekion.com
-- type: Documentation
-  url: https://tekion.com/products/apc
-- type: Portal
-  url: https://apc.tekioncloud.com
-- type: SignUp
-  url: https://apc.tekioncloud.com/user/register
-- type: Plans
-  url: plans/tekion-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/tekion-rate-limits.yml
-- type: FinOps
-  url: finops/tekion-finops.yml
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v5
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: Tekion's Automotive Partner Cloud API reference sits behind partner registration at apc.tekioncloud.com/user/register with use-case review; no public OpenAPI is served at api.tekioncloud.com or apc.tekioncloud.com.
+  evidence:
+  - url: https://apc.tekioncloud.com/user/register
+    status: 200
+  - url: https://api.tekioncloud.com/openapi.json
+    status: 404
+  - url: https://apc.tekioncloud.com/openapi.json
+    status: 404
+  checked: '2026-10-20'

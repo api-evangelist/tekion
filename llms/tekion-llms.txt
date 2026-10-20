@@ -1,0 +1,68 @@
+# Tekion
+
+> Tekion is a cloud-native, AI-native automotive retail technology company. Its platform unifies dealership operations — sales, service, parts, accounting, CRM, payments, and digital retail — in a single system of record, replacing legacy dealer management systems (DMS) with real-time data and built-in AI agents. Tekion powers 3,000+ dealerships across North America, the UK, and Europe, processing $43B+ in annual transactions.
+
+Key facts: Founded by Jay Vijayan (former CIO of Tesla). The core platform is the Automotive Retail Cloud (ARC) for dealers, extended by the Automotive Enterprise Cloud (AEC) for OEMs and large dealer groups, and the Automotive Partner Cloud (APC) for third-party integrations (250+ partner integrations, 390+ APIs). AI is native to the platform, not bolted on: agentic AI operates across service, sales/F&I, accounting, inventory, and analytics through T1, Tekion's unified AI interface. Tekion is ISO/IEC 42001 certified (responsible AI management), ISO/IEC 27001 certified, and SOC 1 / SOC 2 compliant. OEM partnerships include GM, Honda/Acura, Toyota (SmartPath), Hyundai Canada, Kia Canada, and Volkswagen (OSS).
+
+## Products
+
+- [Automotive Retail Cloud (ARC)](https://tekion.com/products/arc): The AI-native platform that powers dealership operations end to end — sales, service, parts, accounting, and digital retail in one system.
+- [Automotive Enterprise Cloud (AEC)](https://tekion.com/products/aec): Enterprise layer for OEMs and large dealer groups — unified OEM-to-retailer shopping experience, consolidated reporting, and multi-rooftop management.
+- [Automotive Partner Cloud (APC)](https://tekion.com/products/apc): Open API ecosystem and app marketplace enabling secure, seamless data exchange with 250+ technology partners.
+- [Dealer Management System (DMS)](https://tekion.com/products/dms): Cloud-native DMS serving as the dealership's core system of record.
+- [CRM](https://tekion.com/products/arc/crm): Native customer relationship management for sales and marketing, unified with the DMS on one data foundation.
+- [Digital Service Experience (DSE)](https://tekion.com/products/arc/dse): Consumer-facing digital service scheduling, status tracking, and approvals.
+- [Virtual to Visit](https://tekion.com/products/virtual-to-visit): End-to-end digital retail journey from online shopping to in-store purchase and delivery.
+- [Tekion Pay](https://tekion.com/products/arc/tekion-pay): Integrated payment processing for dealership transactions, including buy-now-pay-later options.
+- [Payroll](https://tekion.com/products/arc/payroll): Dealership payroll integrated with platform accounting.
+
+## AI Agents
+
+- [T1](https://tekion.com/t1): Tekion's AI-native interface and agent orchestrator — lets dealership staff ask, decide, and act on live business data inside every workflow.
+- [Service AI](https://tekion.com/service-ai): AI agents for fixed operations — Service Scheduler AI (automated booking), Technician AI (real-time repair recommendations), and Service Advisor AI (customer-ready repair summaries with 90%+ acceptance rate).
+- [CRM AI](https://tekion.com/crm-ai): AI-powered sales performance management and customer engagement inside the CRM.
+- [Accounting AI](https://tekion.com/accounting-ai): AI for accounts payable, invoice processing, and financial workflows.
+- [Inventory AI](https://tekion.com/inventory-ai): AI-driven inventory intelligence and merchandising.
+
+## Company
+
+- [About Us](https://tekion.com/about-us): Company mission, story, and overview.
+- [Leadership](https://tekion.com/about-us/our-leaders): Executive and leadership team.
+- [OEM Partners](https://tekion.com/oem-partners): OEM certifications and partnerships (GM, Honda/Acura, Toyota, Hyundai, Kia, Volkswagen).
+- [Technology Partners](https://tekion.com/technology-partners): Certified technology and integration partners.
+- [Powered by Tekion](https://tekion.com/powered-by-tekion): Programs and solutions built on the Tekion platform.
+- [Careers](https://tekion.com/careers): Open roles across North America, India, and Europe.
+- [FAQ](https://tekion.com/faq): Frequently asked questions about Tekion and its products.
+- [Request a Demo](https://tekion.com/request-demo): See the platform in action.
+
+## Customer Evidence
+
+- [Testimonials](https://tekion.com/testimonials): Dealer customer stories, video reviews, and measured results.
+- [Ken Garff Automotive Group](https://tekion.com/blog/how-service-advisor-ai-improved-efficiency-and-drove-revenue-for-ken-garff-automotive-group): Service Advisor AI efficiency and revenue results at a top-10 US dealer group.
+- [Asbury Automotive Group](https://tekion.com/blog/how-asbury-automotive-proves-the-roi-of-a-unified-platform): Enterprise-scale ROI of a unified platform at a Fortune 500 dealer group.
+- [Dutch Miller Auto Group](https://tekion.com/testimonials/dutch-miller-auto-group-unified-tekion-platform): Group-wide acceleration on the unified AI-native platform.
+
+## Guides & Explainers
+
+- [What is a Dealership Management System (DMS)? A Complete Guide](https://tekion.com/blog/what-is-a-dealership-management-system--dms--a-complete-guide): Definitional guide to DMS platforms.
+- [What is an AI-Native DMS?](https://tekion.com/blog/what-is-an-ai-native-dms-inside-tekions-approach-to-dealership-ai): How an AI-native DMS differs from legacy systems with AI add-ons.
+- [What is a CRM in Automotive Retail?](https://tekion.com/blog/what-is-a-crm-in-automotive-retail): Definitional guide to automotive CRM.
+- [What is Tekion T1?](https://tekion.com/blog/what-is-tekion-t1-the-ai-native-interface-built-into-every-dealership-workflow): Explainer on Tekion's AI interface.
+- [The Complete Guide to AI Voice Agents for Dealership Service Departments](https://tekion.com/blog/the-complete-guide-to-ai-voice-agents-for-dealership-service-departments): Guide to AI voice agents in fixed ops.
+- [AI Agents vs. AI Add-Ons](https://tekion.com/blog/ai-agents-vs-ai-add-ons-why-dealerships-are-rethinking-point-solutions): Why dealerships are moving away from point solutions.
+
+## Trust & Security
+
+- [Trust Portal](https://tekion.com/trust-portal): Security, privacy, compliance, and responsible AI overview.
+- [Responsible AI](https://tekion.com/trust-portal/responsible-ai): ISO/IEC 42001-certified responsible AI management.
+- [Security](https://tekion.com/trust-portal/security): Data security practices and certifications (ISO 27001, SOC 1, SOC 2).
+- [Compliance](https://tekion.com/trust-portal/compliance): Regulatory compliance (GLBA, FTC Safeguards, CPRA).
+- [Privacy Policy](https://tekion.com/legal/privacy-policy): Privacy policy and data handling.
+
+## Optional
+
+- [Blog](https://tekion.com/blog): Articles on automotive retail, AI, and dealership operations.
+- [News](https://tekion.com/news): Press coverage and company announcements.
+- [Events](https://tekion.com/events): Webinars, conferences, and on-demand sessions.
+- [Resources](https://tekion.com/resources): eBooks, case studies, whitepapers, and product videos.
+- [System Status](https://status.tekion.com): Live platform status.

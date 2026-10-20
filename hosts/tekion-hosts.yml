@@ -1,0 +1,119 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 5
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - identity
+  - other
+  - status
+  - website
+hosts:
+- host: apc.tekioncloud.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Portal
+  - SignUp
+  serves: []
+  registrable_domain: tekioncloud.com
+  role: identity
+  relation: other-domain
+- host: api.tekion.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: tekion.com
+  role: api
+  relation: own
+- host: api.tekioncloud.com
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: tekioncloud.com
+  role: api
+  relation: other-domain
+- host: go.tekion.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: tekion.com
+  role: other
+  relation: own
+- host: status.tekion.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types:
+  - StatusPage
+  serves:
+  - docs
+  registrable_domain: tekion.com
+  role: status
+  relation: own
+- host: tekion.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - Blog
+  - Website
+  - PrivacyPolicy
+  - TermsOfService
+  - Newsroom
+  - Documentation
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: tekion.com
+  role: website
+  relation: own
+- host: trust.tekion.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: tekion.com
+  role: other
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
