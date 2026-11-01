@@ -1,4 +1,4 @@
-# Tekion (tekion)
+# Tekion
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,107 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tekion is a cloud-native, AI-native automotive retail platform. Its flagship **Automotive Retail Cloud (ARC)** is a modern dealer management system (DMS) spanning sales, service, parts, inventory, F&I, accounting, and CRM for franchise dealerships and OEMs. Tekion exposes its data and workflows to technology partners through the **Automotive Partner Cloud (APC)** — an open, OpenAPI-standard partner API program with REST APIs and webhooks that give approved partners near real-time access to a dealership's sales, service, inventory, and parts data.
+Tekion is a cloud-native, AI-native automotive retail platform whose flagship Automotive Retail Cloud (ARC) is a modern dealer management system (DMS) spanning sales, service, parts, inventory, F&I, accounting, and CRM for franchise dealerships and OEMs. Tekion exposes its data and workflows to technology partners through the Automotive Partner Cloud (APC) - an open, OpenAPI-standard partner API program with REST APIs and webhooks that give approved partners near real-time access to a dealership's sales, service, inventory, and parts data. APC is partner-gated: developers register at the APC portal, submit a use case, and are reviewed (typically within ~48 hours) before the API documentation dashboard, credentials, and endpoints are unlocked. Access is tiered (Standard, Enterprise/Elevated, Premium/Strategic) with different API scopes, rate limits, and read/write capabilities. Because the technical reference is behind partner authentication, the APIs below are honestly modeled by data domain rather than transcribed from a public spec.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/tekion/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/tekion/refs/heads/main/apis.yml)
+**Areas:** Automotive · Dealership · DMS · Automotive Retail Cloud · Partner API · Sales · Services · Inventory · Parts · Webhook · Gated
 
-## Access Model (Important)
+## Tekion on APIs.io
 
-The APC API is **partner-gated**. The technical API reference, credentials, and endpoints are only available after partner approval:
+Everything profiled for Tekion is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tekion/](https://apis.io/providers/tekion/)** — or go straight to one of the APIs or properties below.
 
-1. **Register** at [apc.tekioncloud.com/user/register](https://apc.tekioncloud.com/user/register) with minimal fields and legal-terms acceptance.
-2. **Submit** a use case and select the APIs you need; applications are reviewed (typically within ~48 hours).
-3. **Access** the API documentation dashboard, credentials, and endpoints once approved.
+### APIs (6)
 
-Access is **tiered**:
+- [Tekion Sales and Deals API](https://apis.io/apis/tekion/tekion-sales-deals-api/) — Near real-time access to a dealership's sales and deal data - deal jackets, desking, F&I products, and sold-vehicle records - through the Automotive Partner…
+- [Tekion Inventory API](https://apis.io/apis/tekion/tekion-inventory-api/) — Access to new and used vehicle inventory - stock, VIN-level detail, pricing, and availability - exposed to approved partners via APC standard open APIs and…
+- [Tekion Service API](https://apis.io/apis/tekion/tekion-service-api/) — Fixed-operations and service data - repair orders, service appointments, labor operations, and status updates - available to approved partners through APC…
+- [Tekion Parts API](https://apis.io/apis/tekion/tekion-parts-api/) — Parts inventory, catalog lookup, pricing, and ordering data (including electronic parts catalog / EPC integration) exposed to approved partners via APC.…
+- [Tekion Customers API](https://apis.io/apis/tekion/tekion-customers-api/) — Customer and CRM records - contact, ownership, and relationship data tied to sales and service activity - made available to approved partners through APC,…
+- [Tekion Webhooks](https://apis.io/apis/tekion/tekion-webhooks-api/) — Server-to-endpoint webhooks that keep partner systems in sync as dealership data changes across sales, service, inventory, and parts. Webhooks POST event…
 
-- **Standard** — foundational open APIs (near real-time sales, service, inventory, parts), webhooks, standard rate limits.
-- **Enterprise (Elevated)** — additional APIs, higher rate limits, enhanced read/write and reference-data access.
-- **Strategic (Premium)** — customized development, Premium APIs and API mapping, specialized workflows, and go-to-market support.
+### Published properties
 
-Dealers separately control which partners may access their data via the APC **Integration Hub**, and can track who accesses what.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Because the full technical reference is behind partner authentication, the APIs below are **honestly modeled by data domain** (`EndpointsModeled: true`) rather than transcribed from a public specification. No OpenAPI document, Postman collection, or concrete endpoint list was fabricated. Contact `APCintegrations@tekion.com` for partner enablement.
+#### Security (2)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Automotive
-- Dealership
-- DMS
-- Automotive Retail Cloud
-- Partner API
-- Sales
-- Service
-- Inventory
-- Parts
-- Webhooks
-- Gated
+- [Tekion Domain Security](https://apis.io/security/tekion/tekion-domain-security/)
+- [Tekion Trust Center](https://apis.io/security/tekion/tekion-trust-center/)
 
-## Timestamps
+#### Plans and pricing (1)
 
-- **Created:** 2026-07-10
-- **Modified:** 2026-07-10
+Published plans, tiers and prices.
 
-## APIs (Modeled by Data Domain)
+- [Tekion Plans Pricing](https://apis.io/plans/tekion/tekion-plans-pricing/)
 
-### Tekion Sales and Deals API
+#### Rate limits (1)
 
-Near real-time access to a dealership's sales and deal data — deal jackets, desking, F&I products, and sold-vehicle records — through the Automotive Partner Cloud. Endpoints are published inside the gated APC dashboard after approval.
+Published request limits.
 
-- **Human URL:** [https://tekion.com/products/apc](https://tekion.com/products/apc)
-- **Base URL (representative):** `https://api.tekioncloud.com`
+- [Tekion Rate Limits](https://apis.io/rate-limits/tekion/tekion-rate-limits/)
 
-### Tekion Inventory API
+#### FinOps (1)
 
-New and used vehicle inventory — stock, VIN-level detail, pricing, and availability — exposed to approved partners via APC standard open APIs and webhooks.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://tekion.com/products/apc](https://tekion.com/products/apc)
-- **Base URL (representative):** `https://api.tekioncloud.com`
+- [Tekion Finops](https://apis.io/finops/tekion/tekion-finops/)
 
-### Tekion Service API
+## Where to find this API
 
-Fixed-operations and service data — repair orders, service appointments, labor operations, and status updates — available to approved partners through APC APIs and webhooks.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://tekion.com/products/apc](https://tekion.com/products/apc)
-- **Base URL (representative):** `https://api.tekioncloud.com`
-
-### Tekion Parts API
-
-Parts inventory, catalog lookup, pricing, and ordering data (including electronic parts catalog / EPC integration) exposed to approved partners via APC.
-
-- **Human URL:** [https://tekion.com/products/apc](https://tekion.com/products/apc)
-- **Base URL (representative):** `https://api.tekioncloud.com`
-
-### Tekion Customers API
-
-Customer and CRM records — contact, ownership, and relationship data tied to sales and service activity — made available to approved partners through APC, subject to the dealer's data-sharing authorizations.
-
-- **Human URL:** [https://tekion.com/products/apc](https://tekion.com/products/apc)
-- **Base URL (representative):** `https://api.tekioncloud.com`
-
-### Tekion Webhooks
-
-Server-to-endpoint webhooks that keep partner systems in sync as dealership data changes across sales, service, inventory, and parts. Webhooks POST event payloads to a partner-registered HTTP endpoint (not a WebSocket).
-
-- **Human URL:** [https://tekion.com/products/apc](https://tekion.com/products/apc)
-- **Base URL (representative):** `https://api.tekioncloud.com`
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/tekion)
 - [Website](https://tekion.com)
 - [Documentation](https://tekion.com/products/apc)
-- [Portal](https://apc.tekioncloud.com)
-- [Sign Up](https://apc.tekioncloud.com/user/register)
-- [Plans](plans/tekion-plans-pricing.yml)
-- [Rate Limits](rate-limits/tekion-rate-limits.yml)
-- [Fin Ops](finops/tekion-finops.yml)
+- [Sign up](https://apc.tekioncloud.com/user/register)
+- [Blog](https://tekion.com/blog)
+- [Security](https://tekion.com/trust-portal/security)
+- [Compliance](https://trust.tekion.com/)
+- [Terms of service](https://tekion.com/refer/terms)
+- [Privacy policy](https://tekion.com/trust-portal/privacy)
+- [Status](https://status.tekion.com/)
 
-## WebSocket Review
+## API Evangelist rating
 
-Tekion does **not** expose a documented public WebSocket API. APC delivers near real-time updates via REST APIs and webhooks (plus FTP feeds) — push-over-HTTP, not a bidirectional `wss://` transport. See [review.yml](review.yml).
+**Kin Score 28.2** — thin · rubric 0.24.0 · scored 2026-10-20
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 57.9 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tekion/](https://apis.io/providers/tekion/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tekion: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tekion/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
